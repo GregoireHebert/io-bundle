@@ -2,7 +2,7 @@
     "name": "gheb/IOBundle",
     "description": "This Bundle is a bridge to the Gheb/NeatBundle",
     "keywords": ["io", "neuroevolution", "augmenting", "topologies", "neat"],
-    "homepage": "https://github.com/GregoireHebert/IOBundle",
+    "homepage": "https://github.com/GregoireHebert/io-bundle",
     "license": "MIT",
     "version": "1.0.0",
     "type": "symfony-bundle",
@@ -16,8 +16,8 @@
 
     "support": {
         "email": "gregoire59166@gmail.com",
-        "issues": "https://github.com/GregoireHebert/IOBundle/issues",
-        "source": "https://github.com/GregoireHebert/IOBundle"
+        "issues": "https://github.com/GregoireHebert/io-bundle/issues",
+        "source": "https://github.com/GregoireHebert/io-bundle"
     },
 
     "autoload":     {
