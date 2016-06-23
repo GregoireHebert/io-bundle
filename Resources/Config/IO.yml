@@ -1,0 +1,24 @@
+parameters:
+  gheb.io.aggregator.inputs.class: Gheb\IOBundle\Inputs\InputsAggregator
+  gheb.io.aggregator.outputs.class: Gheb\IOBundle\Outputs\OutputsAggregator
+  gheb.io.command.outputs.class: Gheb\IOBundle\Command\OutputsCommand
+  gheb.io.command.inputs.class: Gheb\IOBundle\Command\InputsCommand
+
+services:
+  gheb.io.aggregator.inputs:
+    class: %gheb.io.aggregator.inputs.class%
+
+  gheb.io.aggregator.outputs:
+    class: %gheb.io.aggregator.outputs.class%
+
+  gheb.io.command.ouputs:
+    class: %gheb.io.command.outputs.class%
+    arguments: [ '@gheb.io.aggregator.outputs' ]
+    tags:
+      - { name: console.command }
+
+  gheb.io.command.inputs:
+    class: %gheb.io.command.inputs.class%
+    arguments: [ '@gheb.io.aggregator.inputs' ]
+    tags:
+      - { name: console.command }
