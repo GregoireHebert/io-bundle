@@ -1,6 +1,6 @@
 <?php
 
-namespace Gheb\IOBundle;
+namespace Gheb\IOBundle\Aggregator;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Gheb\IOBundle\Inputs\AbstractInput;

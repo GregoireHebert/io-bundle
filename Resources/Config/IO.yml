@@ -1,6 +1,6 @@
 parameters:
-  gheb.io.aggregator.inputs.class: Gheb\IOBundle\Inputs\InputsAggregator
-  gheb.io.aggregator.outputs.class: Gheb\IOBundle\Outputs\OutputsAggregator
+  gheb.io.aggregator.inputs.class: Gheb\IOBundle\Aggregator\Aggregator
+  gheb.io.aggregator.outputs.class: Gheb\IOBundle\Aggregator\Aggregator
   gheb.io.command.outputs.class: Gheb\IOBundle\Command\OutputsCommand
   gheb.io.command.inputs.class: Gheb\IOBundle\Command\InputsCommand
 

@@ -3,7 +3,7 @@
 namespace Gheb\IOBundle\Command;
 
 use Gheb\IOBundle\Inputs\AbstractInput;
-use Gheb\IOBundle\Inputs\InputsAggregator;
+use Gheb\IOBundle\Aggregator\InputsAggregator;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
