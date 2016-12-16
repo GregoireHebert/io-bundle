@@ -4,13 +4,14 @@ namespace Gheb\IOBundle\Outputs;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
+use Gheb\IOBundle\IO;
 
 /**
  * Class AbstractOutput
  * @author  Grégoire Hébert <gregoire@opo.fr>
  * @package Gheb\IOBundle\Outputs
  */
-abstract class AbstractOutput
+abstract class AbstractOutput implements IO
 {
     /**
      * @var EntityManager
