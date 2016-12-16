@@ -3,7 +3,7 @@
 namespace Gheb\IOBundle;
 
 
-interface IO
+interface IOInterface
 {
     /**
      * Return the OutputName for command retrieval

@@ -11,7 +11,7 @@ use Gheb\IOBundle\IO;
  * @author  Grégoire Hébert <gregoire@opo.fr>
  * @package Gheb\IOBundle\Inputs
  */
-abstract class AbstractInput implements IO
+abstract class AbstractInput implements IOInterface
 {
     /**
      * @var EntityManager
