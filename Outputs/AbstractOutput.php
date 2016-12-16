@@ -4,7 +4,7 @@ namespace Gheb\IOBundle\Outputs;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
-use Gheb\IOBundle\IO;
+use Gheb\IOBundle\IOInterface;
 
 /**
  * Class AbstractOutput

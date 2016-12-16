@@ -4,7 +4,7 @@ namespace Gheb\IOBundle\Inputs;
 
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityNotFoundException;
-use Gheb\IOBundle\IO;
+use Gheb\IOBundle\IOInterface;
 
 /**
  * Class AbstractInput
