@@ -3,7 +3,7 @@
 namespace Gheb\IOBundle\Command;
 
 use Gheb\IOBundle\Outputs\AbstractOutput;
-use Gheb\IOBundle\Aggregator\OutputsAggregator;
+use Gheb\IOBundle\Aggregator\Aggregator;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -17,16 +17,16 @@ use Symfony\Component\Console\Output\OutputInterface;
 class OutputsCommand extends ContainerAwareCommand
 {
     /**
-     * @var OutputsAggregator
+     * @var Aggregator
      */
     private $outputsAggregator;
 
     /**
      * OutputsCommand constructor.
      *
-     * @param OutputsAggregator $aggregator
+     * @param Aggregator $aggregator
      */
-    public function __construct(OutputsAggregator $aggregator)
+    public function __construct(Aggregator $aggregator)
     {
         $this->outputsAggregator = $aggregator;
         parent::__construct();

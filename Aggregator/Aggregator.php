@@ -4,7 +4,7 @@ namespace Gheb\IOBundle\Aggregator;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Gheb\IOBundle\Inputs\AbstractInput;
-use Gheb\IOBundle\IO;
+use Gheb\IOBundle\IOInterface;
 use Gheb\IOBundle\Outputs\AbstractOutput;
 
 /**
@@ -61,7 +61,7 @@ class Aggregator
     public function getAggregated($name)
     {
         $aggregated = $this->aggregate->filter(
-            function (IO $aggregated) use ($name) {
+            function (IOInterface $aggregated) use ($name) {
                 /** @var AbstractOutput|AbstractInput $aggregated */
                 return strtolower($aggregated->getName()) == strtolower($name);
             }
