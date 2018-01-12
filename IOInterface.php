@@ -9,5 +9,5 @@ interface IOInterface
      * Return the OutputName for command retrieval
      * @return string
      */
-    public function getName();
+    public function getName(): string;
 }

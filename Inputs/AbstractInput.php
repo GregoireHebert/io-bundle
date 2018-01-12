@@ -3,7 +3,6 @@
 namespace Gheb\IOBundle\Inputs;
 
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityNotFoundException;
 use Gheb\IOBundle\IOInterface;
 
 /**
@@ -23,7 +22,6 @@ abstract class AbstractInput implements IOInterface
      *
      * @param EntityManager $em
      *
-     * @throws EntityNotFoundException
      */
     public function __construct(EntityManager $em)
     {
@@ -34,11 +32,11 @@ abstract class AbstractInput implements IOInterface
      * Return the InputName for command retrieval
      * @return string
      */
-    public abstract function getName();
+    abstract public function getName(): string;
 
     /**
      * Getting the value of the input
      * @return mixed
      */
-    public abstract function getValue();
+    abstract public function getValue();
 }

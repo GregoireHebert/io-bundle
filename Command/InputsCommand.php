@@ -5,6 +5,8 @@ namespace Gheb\IOBundle\Command;
 use Gheb\IOBundle\Inputs\AbstractInput;
 use Gheb\IOBundle\Aggregator\Aggregator;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Exception\InvalidArgumentException;
+use Symfony\Component\Console\Exception\LogicException;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\output\OutputInterface;
@@ -24,6 +26,8 @@ class InputsCommand extends ContainerAwareCommand
     /**
      * InputsCommand constructor.
      *
+     * @throws LogicException
+     *
      * @param Aggregator $aggregator
      */
     public function __construct(Aggregator $aggregator)
@@ -34,8 +38,10 @@ class InputsCommand extends ContainerAwareCommand
 
     /**
      * configure the command
+     *
+     * @throws InvalidArgumentException
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName('gheb:io:input')
@@ -50,6 +56,8 @@ class InputsCommand extends ContainerAwareCommand
     /**
      * @param InputInterface  $input
      * @param OutputInterface $output
+     *
+     * @throws InvalidArgumentException
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {

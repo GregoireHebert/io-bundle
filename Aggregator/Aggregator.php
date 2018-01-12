@@ -31,12 +31,12 @@ class Aggregator
      * Aggregate all input/output in one place
      *
      * @param AbstractInput|AbstractOutput $io
-     * @throws \Exception
+     * @throws \InvalidArgumentException
      */
-    public function addIO($io)
+    public function addIO($io): void
     {
         if (!$io instanceof AbstractInput && !$io instanceof AbstractOutput) {
-            throw new \Exception('io must be an instance of '.AbstractInput::class.' or '.AbstractOutput::class.' but '.get_class($io).' instead !');
+            throw new \InvalidArgumentException('io must be an instance of '.AbstractInput::class.' or '.AbstractOutput::class.' but '.\get_class($io).' instead !');
         }
 
         $this->aggregate->add($io);
@@ -46,7 +46,7 @@ class Aggregator
      * Return the number of io aggregated
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return $this->aggregate->count();
     }
@@ -63,7 +63,7 @@ class Aggregator
         $aggregated = $this->aggregate->filter(
             function (IOInterface $aggregated) use ($name) {
                 /** @var AbstractOutput|AbstractInput $aggregated */
-                return strtolower($aggregated->getName()) == strtolower($name);
+                return strtolower($aggregated->getName()) === strtolower($name);
             }
         );
 

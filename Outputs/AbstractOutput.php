@@ -3,7 +3,6 @@
 namespace Gheb\IOBundle\Outputs;
 
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityNotFoundException;
 use Gheb\IOBundle\IOInterface;
 
 /**
@@ -23,7 +22,6 @@ abstract class AbstractOutput implements IOInterface
      *
      * @param EntityManager $em
      *
-     * @throws EntityNotFoundException
      */
     public function __construct(EntityManager $em)
     {
@@ -33,11 +31,12 @@ abstract class AbstractOutput implements IOInterface
     /**
      * Apply method
      */
-    public abstract function apply();
+    abstract public function apply();
 
     /**
      * Return the OutputName for command retrieval
+     *
      * @return string
      */
-    public abstract function getName();
+    abstract public function getName(): string;
 }
