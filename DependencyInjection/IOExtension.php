@@ -7,11 +7,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-/**
- * Class IOExtension
- * @author  Grégoire Hébert <gregoire@opo.fr>
- * @package Gheb\IOBundle\DependencyInjection
- */
 class IOExtension extends Extension
 {
     /**

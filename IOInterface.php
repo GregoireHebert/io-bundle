@@ -2,7 +2,6 @@
 
 namespace Gheb\IOBundle;
 
-
 interface IOInterface
 {
     /**
